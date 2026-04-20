@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaMaritimo.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bea3c2551d8fe0b6f64a0ee838ed640eecdc7db1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f7c0986db4df7039ea8853ee00f07317d797389")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaMaritimo.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaMaritimo.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
