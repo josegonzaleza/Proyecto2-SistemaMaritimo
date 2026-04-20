@@ -1,0 +1,42 @@
+﻿@model SistemaMaritimo.Web.Models.LicenciaViewModel
+
+@{
+    ViewData["Title"] = "Agregar Licencia";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Agregar Licencia Marítima</h4>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+
+                <form asp-action="CrearLicencia" method="post">
+                    <input asp-for="PersonalId" type="hidden" />
+
+                    <div class="mb-3">
+                        <label asp-for="NombreLicencia" class="form-label"></label>
+                        <input asp-for="NombreLicencia" class="form-control" />
+                        <span asp-validation-for="NombreLicencia" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="FechaVencimiento" class="form-label"></label>
+                        <input asp-for="FechaVencimiento" class="form-control" />
+                        <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Detalle" asp-route-id="@Model.PersonalId" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

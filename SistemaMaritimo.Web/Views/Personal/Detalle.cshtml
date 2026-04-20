@@ -1,0 +1,150 @@
+﻿@model SistemaMaritimo.Web.Models.PersonalDetalleViewModel
+
+@{
+    ViewData["Title"] = "Detalle de Personal";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Detalle de Personal</h2>
+    <div>
+        <a asp-action="CrearLicencia" asp-route-personalId="@Model.Id" class="btn btn-primary">Agregar licencia</a>
+        <a asp-action="CrearAsignacion" asp-route-personalId="@Model.Id" class="btn btn-success">Asignar a barco</a>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">Datos Generales</div>
+            <div class="card-body">
+                <p><strong>Nombre:</strong> @Model.NombreCompleto</p>
+                <p><strong>Identificación:</strong> @Model.IdentificacionUnica</p>
+                <p><strong>Rol primario:</strong> @Model.RolPrimario</p>
+                <p><strong>Fecha contratación:</strong> @Model.FechaContratacion.ToString("dd/MM/yyyy")</p>
+                <p>
+                    <strong>Estado:</strong>
+                    @if (Model.Activo)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactivo</span>
+                    }
+                </p>
+                <p><strong>Barco actual:</strong> @(string.IsNullOrEmpty(Model.BarcoActual) ? "Sin asignación" : Model.BarcoActual)</p>
+                <p><strong>Puesto actual:</strong> @(string.IsNullOrEmpty(Model.PuestoActual) ? "Sin asignación" : Model.PuestoActual)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">Licencias Marítimas</div>
+            <div class="card-body">
+                @if (Model.Licencias.Any())
+                {
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>Licencia</th>
+                                <th>Vencimiento</th>
+                                <th>Estado</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Licencias)
+                            {
+                                <tr>
+                                    <td>@item.NombreLicencia</td>
+                                    <td>@item.FechaVencimiento.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        @if (item.EstadoVisual == "Vencida")
+                                        {
+                                            <span class="badge bg-danger">Vencida</span>
+                                        }
+                                        else if (item.EstadoVisual == "Por vencer")
+                                        {
+                                            <span class="badge bg-warning text-dark">Por vencer</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-success">Vigente</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-action="EliminarLicencia"
+                                               asp-route-personalId="@Model.Id"
+                                               asp-route-licenciaId="@item.Id"
+                                               class="btn btn-sm btn-danger"
+                                               onclick="return confirm('¿Eliminar licencia?');">
+                                            Eliminar
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="mb-0">No hay licencias registradas.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">Historial de Asignaciones</div>
+            <div class="card-body">
+                @if (Model.HistorialAsignaciones.Any())
+                {
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Barco</th>
+                                <th>Puesto</th>
+                                <th>Inicio</th>
+                                <th>Fin</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.HistorialAsignaciones)
+                            {
+                                <tr>
+                                    <td>@item.NombreBarco</td>
+                                    <td>@item.PuestoAsignado</td>
+                                    <td>@item.FechaInicio.ToString("dd/MM/yyyy")</td>
+                                    <td>@(item.FechaFin.HasValue ? item.FechaFin.Value.ToString("dd/MM/yyyy") : "-")</td>
+                                    <td>
+                                        @if (item.Activa)
+                                        {
+                                            <span class="badge bg-success">Activa</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">Histórica</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="mb-0">No hay historial de asignaciones.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

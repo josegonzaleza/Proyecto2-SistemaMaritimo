@@ -42,6 +42,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Personal/CrearAsignacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxcQ3JlYXJBc2lnbmFjaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Personal/CrearLicencia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxcQ3JlYXJMaWNlbmNpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Personal/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Personal/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxcRGV0YWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Personal/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Personal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Usuarios/Bitacora.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQml0YWNvcmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
