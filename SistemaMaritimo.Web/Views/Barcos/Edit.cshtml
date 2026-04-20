@@ -1,0 +1,79 @@
+﻿@model SistemaMaritimo.Web.Models.BarcoViewModel
+
+@{
+    ViewData["Title"] = "Editar Barco";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-warning">
+                <h4 class="mb-0">Editar Barco</h4>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+
+                <form asp-action="Edit" method="post">
+                    <input asp-for="Id" type="hidden" />
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="NombreEmbarcacion" class="form-label"></label>
+                            <input asp-for="NombreEmbarcacion" class="form-control" />
+                            <span asp-validation-for="NombreEmbarcacion" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="MatriculaUnica" class="form-label"></label>
+                            <input asp-for="MatriculaUnica" class="form-control" />
+                            <span asp-validation-for="MatriculaUnica" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="CapacidadCarga" class="form-label"></label>
+                            <input asp-for="CapacidadCarga" class="form-control" />
+                            <span asp-validation-for="CapacidadCarga" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="PuertoBase" class="form-label"></label>
+                            <input asp-for="PuertoBase" class="form-control" />
+                            <span asp-validation-for="PuertoBase" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="ModeloMotor" class="form-label"></label>
+                            <input asp-for="ModeloMotor" class="form-control" />
+                            <span asp-validation-for="ModeloMotor" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label asp-for="PotenciaMotor" class="form-label"></label>
+                            <input asp-for="PotenciaMotor" class="form-control" />
+                            <span asp-validation-for="PotenciaMotor" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label asp-for="HorasUsoMotor" class="form-label"></label>
+                            <input asp-for="HorasUsoMotor" class="form-control" />
+                            <span asp-validation-for="HorasUsoMotor" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input asp-for="Archivado" class="form-check-input" />
+                        <label asp-for="Archivado" class="form-check-label">Archivado</label>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-warning">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Barcos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Barcos/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29zXERldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Barcos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Barcos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFyY29zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

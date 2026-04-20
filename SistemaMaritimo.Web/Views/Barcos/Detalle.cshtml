@@ -1,0 +1,46 @@
+﻿@model SistemaMaritimo.Web.Models.BarcoViewModel
+
+@{
+    ViewData["Title"] = "Detalle de Barco";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Detalle de Barco</h2>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-dark text-white">
+        Información del Barco
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Nombre:</strong> @Model.NombreEmbarcacion</p>
+                <p><strong>Matrícula:</strong> @Model.MatriculaUnica</p>
+                <p><strong>Puerto base:</strong> @Model.PuertoBase</p>
+                <p><strong>Capacidad de carga:</strong> @Model.CapacidadCarga</p>
+            </div>
+
+            <div class="col-md-6">
+                <p><strong>Modelo del motor:</strong> @Model.ModeloMotor</p>
+                <p><strong>Potencia del motor:</strong> @Model.PotenciaMotor</p>
+                <p><strong>Horas de uso:</strong> @Model.HorasUsoMotor</p>
+                <p>
+                    <strong>Estado:</strong>
+                    @if (!Model.Archivado)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Archivado</span>
+                    }
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
