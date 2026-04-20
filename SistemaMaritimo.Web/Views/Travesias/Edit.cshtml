@@ -1,0 +1,63 @@
+﻿@model SistemaMaritimo.Web.Models.TravesiaViewModel
+
+@{
+    ViewData["Title"] = "Editar Travesía";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-warning">
+                <h4 class="mb-0">Editar Travesía</h4>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+
+                <form asp-action="Edit" method="post">
+                    <input asp-for="Id" type="hidden" />
+                    <input asp-for="Estado" type="hidden" />
+
+                    <div class="mb-3">
+                        <label asp-for="BarcoId" class="form-label">Barco</label>
+                        <select asp-for="BarcoId" class="form-select" asp-items="ViewBag.Barcos"></select>
+                        <span asp-validation-for="BarcoId" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="PuertoOrigen" class="form-label"></label>
+                            <input asp-for="PuertoOrigen" class="form-control" />
+                            <span asp-validation-for="PuertoOrigen" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="PuertoDestino" class="form-label"></label>
+                            <input asp-for="PuertoDestino" class="form-control" />
+                            <span asp-validation-for="PuertoDestino" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="FechaPrevistaSalida" class="form-label"></label>
+                            <input asp-for="FechaPrevistaSalida" class="form-control" />
+                            <span asp-validation-for="FechaPrevistaSalida" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="FechaPrevistaLlegada" class="form-label"></label>
+                            <input asp-for="FechaPrevistaLlegada" class="form-control" />
+                            <span asp-validation-for="FechaPrevistaLlegada" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-warning">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

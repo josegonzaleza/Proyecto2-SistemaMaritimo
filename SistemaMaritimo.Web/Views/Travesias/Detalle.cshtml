@@ -1,0 +1,28 @@
+﻿@model SistemaMaritimo.Web.Models.TravesiaViewModel
+
+@{
+    ViewData["Title"] = "Detalle de Travesía";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Detalle de Travesía</h2>
+    <div>
+        <a asp-action="CambiarEstado" asp-route-id="@Model.Id" class="btn btn-dark">Cambiar estado</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-dark text-white">Información de la Travesía</div>
+    <div class="card-body">
+        <p><strong>Barco:</strong> @ViewBag.NombreBarco</p>
+        <p><strong>Puerto origen:</strong> @Model.PuertoOrigen</p>
+        <p><strong>Puerto destino:</strong> @Model.PuertoDestino</p>
+        <p><strong>Fecha prevista de salida:</strong> @Model.FechaPrevistaSalida.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Fecha prevista de llegada:</strong> @Model.FechaPrevistaLlegada.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Estado:</strong> @Model.Estado</p>
+        <p><strong>Fecha cierre real:</strong> @(Model.FechaCierreReal.HasValue ? Model.FechaCierreReal.Value.ToString("dd/MM/yyyy HH:mm") : "-")</p>
+        <p><strong>Usuario cierre:</strong> @(string.IsNullOrWhiteSpace(Model.UsuarioCierre) ? "-" : Model.UsuarioCierre)</p>
+    </div>
+</div>
