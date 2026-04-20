@@ -1,0 +1,45 @@
+﻿@model List<SistemaMaritimo.Web.Models.HistorialTecnicoViewModel>
+
+@{
+    ViewData["Title"] = "Historial Técnico";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Historial Técnico - @ViewBag.NombreBarco</h2>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <table class="table table-bordered table-striped mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>Orden</th>
+                    <th>Tipo</th>
+                    <th>Trabajo realizado</th>
+                    <th>Fecha registro</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.OrdenServicioId</td>
+                            <td>@item.TipoMantenimiento</td>
+                            <td>@item.DescripcionTrabajo</td>
+                            <td>@item.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4" class="text-center">No hay historial técnico registrado.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

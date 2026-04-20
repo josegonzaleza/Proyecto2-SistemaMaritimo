@@ -1,0 +1,66 @@
+﻿@model SistemaMaritimo.Web.Models.OrdenServicioViewModel
+
+@{
+    ViewData["Title"] = "Nueva Orden";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Nueva Orden de Servicio</h4>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+
+                <form asp-action="Create" method="post">
+                    <div class="mb-3">
+                        <label asp-for="BarcoId" class="form-label">Barco</label>
+                        <select asp-for="BarcoId" class="form-select" asp-items="ViewBag.Barcos">
+                            <option value="">-- Seleccione un barco --</option>
+                        </select>
+                        <span asp-validation-for="BarcoId" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="TipoMantenimiento" class="form-label">Tipo</label>
+                            <select asp-for="TipoMantenimiento" class="form-select" asp-items="ViewBag.Tipos">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                            <span asp-validation-for="TipoMantenimiento" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Prioridad" class="form-label">Prioridad</label>
+                            <select asp-for="Prioridad" class="form-select" asp-items="ViewBag.Prioridades">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                            <span asp-validation-for="Prioridad" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Descripcion" class="form-label"></label>
+                        <textarea asp-for="Descripcion" class="form-control" rows="4"></textarea>
+                        <span asp-validation-for="Descripcion" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="FechaLimite" class="form-label"></label>
+                        <input asp-for="FechaLimite" class="form-control" />
+                        <span asp-validation-for="FechaLimite" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

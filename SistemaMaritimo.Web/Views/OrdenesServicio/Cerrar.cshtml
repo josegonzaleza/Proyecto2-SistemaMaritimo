@@ -1,0 +1,36 @@
+﻿@model SistemaMaritimo.Web.Models.CerrarOrdenViewModel
+
+@{
+    ViewData["Title"] = "Cerrar Orden";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">Cerrar Orden</h4>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+
+                <form asp-action="Cerrar" method="post">
+                    <input asp-for="OrdenId" type="hidden" />
+
+                    <div class="mb-3">
+                        <label asp-for="InformeCierre" class="form-label"></label>
+                        <textarea asp-for="InformeCierre" class="form-control" rows="5"></textarea>
+                        <span asp-validation-for="InformeCierre" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-success">Cerrar orden</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

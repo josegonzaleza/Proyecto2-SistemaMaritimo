@@ -62,6 +62,38 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/AsignarTecnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXEFzaWduYXJUZWNuaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/CambiarEstado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXENhbWJpYXJFc3RhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/Cerrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXENlcnJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXERldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/Historial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXEhpc3RvcmlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/OrdenesServicio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5lc1NlcnZpY2lvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jose2/source/repos/SistemaMaritimo/SistemaMaritimo.Web/Views/Personal/CrearAsignacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxcQ3JlYXJBc2lnbmFjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,40 @@
+﻿@model SistemaMaritimo.Web.Models.OrdenServicioViewModel
+
+@{
+    ViewData["Title"] = "Detalle de Orden";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Detalle de Orden</h2>
+    <div>
+        <a asp-action="AsignarTecnico" asp-route-id="@Model.Id" class="btn btn-secondary">Asignar técnico</a>
+        <a asp-action="CambiarEstado" asp-route-id="@Model.Id" class="btn btn-dark">Cambiar estado</a>
+        <a asp-action="Cerrar" asp-route-id="@Model.Id" class="btn btn-success">Cerrar</a>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-dark text-white">Información de la Orden</div>
+    <div class="card-body">
+        <p><strong>Código:</strong> @Model.CodigoOrden</p>
+        <p><strong>Barco:</strong> @ViewBag.NombreBarco</p>
+        <p><strong>Tipo:</strong> @Model.TipoMantenimiento</p>
+        <p><strong>Prioridad:</strong> @Model.Prioridad</p>
+        <p><strong>Descripción:</strong> @Model.Descripcion</p>
+        <p><strong>Fecha límite:</strong> @Model.FechaLimite.ToString("dd/MM/yyyy")</p>
+        <p><strong>Estado:</strong> @Model.Estado</p>
+        <p><strong>Informe de cierre:</strong> @(string.IsNullOrWhiteSpace(Model.InformeCierre) ? "-" : Model.InformeCierre)</p>
+        <p><strong>Fecha cierre real:</strong> @(Model.FechaCierreReal.HasValue ? Model.FechaCierreReal.Value.ToString("dd/MM/yyyy HH:mm") : "-")</p>
+        <p><strong>Usuario cierre:</strong> @(string.IsNullOrWhiteSpace(Model.UsuarioCierre) ? "-" : Model.UsuarioCierre)</p>
+    </div>
+</div>
+
+@if (Model.BarcoId > 0)
+{
+    <div class="mt-3">
+        <a asp-action="Historial" asp-route-barcoId="@Model.BarcoId" class="btn btn-outline-primary">
+            Ver historial técnico del barco
+        </a>
+    </div>
+}
