@@ -1,0 +1,44 @@
+﻿@model List<SistemaMaritimo.Web.Models.BitacoraCambioRolViewModel>
+
+@{
+    ViewData["Title"] = "Bitácora de Roles";
+}
+
+<h2 class="mb-3">Bitácora de Cambios de Roles</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <table class="table table-bordered table-striped table-hover mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>Usuario afectado</th>
+                    <th>Rol</th>
+                    <th>Acción</th>
+                    <th>Fecha</th>
+                    <th>Realizado por</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.UsuarioAfectado</td>
+                            <td>@item.Rol</td>
+                            <td>@item.Accion</td>
+                            <td>@item.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@item.RealizadoPor</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="text-center">No hay registros de bitácora.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

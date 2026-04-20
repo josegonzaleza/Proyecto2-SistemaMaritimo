@@ -1,0 +1,86 @@
+﻿@model List<SistemaMaritimo.Web.Models.UsuarioViewModel>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Gestión de Usuarios</h2>
+    <div>
+        <a asp-action="Bitacora" class="btn btn-outline-dark">Bitácora</a>
+        <a asp-action="Create" class="btn btn-primary">Nuevo usuario</a>
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <table class="table table-bordered table-striped table-hover mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Activo</th>
+                    <th>Roles</th>
+                    <th style="width: 330px;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.NombreUsuario</td>
+                            <td>
+                                @if (item.Activo)
+                                {
+                                    <span class="badge bg-success">Activo</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Inactivo</span>
+                                }
+                            </td>
+                            <td>@item.Roles</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Editar</a>
+                                <a asp-action="CambiarRol" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Cambiar rol</a>
+                                <a asp-action="CambiarPassword" asp-route-id="@item.Id" class="btn btn-info btn-sm text-white">Contraseña</a>
+
+                                @if (item.Activo)
+                                {
+                                    <a asp-action="Eliminar" asp-route-id="@item.Id"
+                                           class="btn btn-danger btn-sm"
+                                           onclick="return confirm('¿Desea desactivar este usuario?');">
+                                        Desactivar
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-action="Activar" asp-route-id="@item.Id" class="btn btn-success btn-sm">
+                                        Activar
+                                    </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4" class="text-center">No hay usuarios registrados.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
