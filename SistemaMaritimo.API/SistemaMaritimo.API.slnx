@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../SistemaMaritimo.Web/SistemaMaritimo.Web.csproj" Id="3049a00a-45a8-42ec-b858-4b50faf41306" />
+  <Project Path="SistemaMaritimo.API.csproj" />
+</Solution>

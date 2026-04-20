@@ -1,0 +1,8 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<h2>Bienvenida al Sistema Marítimo</h2>
+<p>Usuario autenticado: @ViewBag.Usuario</p>
+
+<a asp-controller="Auth" asp-action="Logout" class="btn btn-danger">Cerrar sesión</a>
