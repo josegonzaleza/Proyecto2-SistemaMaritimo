@@ -99,3 +99,16 @@ C:\Users\Jose2\source\repos\SistemaMaritimo.Web\obj\Debug\net9.0\refint\SistemaM
 C:\Users\Jose2\source\repos\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.pdb
 C:\Users\Jose2\source\repos\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.genruntimeconfig.cache
 C:\Users\Jose2\source\repos\SistemaMaritimo.Web\obj\Debug\net9.0\ref\SistemaMaritimo.Web.dll
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.csproj.AssemblyReference.cache
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.AssemblyInfoInputs.cache
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.AssemblyInfo.cs
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.csproj.CoreCompileInputs.cache
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.RazorAssemblyInfo.cache
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.RazorAssemblyInfo.cs
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.sourcelink.json
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.dll
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\refint\SistemaMaritimo.Web.dll
+C:\Users\Jose2\source\repos\SistemaMaritimo\SistemaMaritimo.Web\obj\Debug\net9.0\SistemaMaritimo.Web.pdb
